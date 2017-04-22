@@ -1,4 +1,6 @@
 (ns sandwich-maker.db)
 
 (def default-db
-  {:name "re-frame"})
+  {:name "re-frame"
+   :selected {:bans :white}
+   })

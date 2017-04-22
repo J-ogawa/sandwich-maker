@@ -6,3 +6,8 @@
  :initialize-db
  (fn  [_ _]
    db/default-db))
+
+(re-frame/reg-event-db
+  :select-bans
+  (fn [db [_ bans]]
+    (assoc-in db [:selected :bans] bans)))
