@@ -11,3 +11,8 @@
   :select-bans
   (fn [db [_ bans]]
     (assoc-in db [:selected :bans] bans)))
+
+(re-frame/reg-event-db
+  :next-step
+  (fn [db [_ next-step]]
+    (assoc-in db [:step] next-step)))

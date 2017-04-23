@@ -8,6 +8,16 @@
    (:name db)))
 
 (re-frame/reg-sub
+  :step
+  (fn [db _]
+    (:step db)))
+
+(re-frame/reg-sub
   :selected
-  (fn [db]
+  (fn [db _]
     (:selected db)))
+
+(re-frame/reg-sub
+  :selected-bans
+  (fn [db _]
+      (:bans (:selected db))))

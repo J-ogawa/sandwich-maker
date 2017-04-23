@@ -2,5 +2,6 @@
 
 (def default-db
   {:name "re-frame"
-   :selected {:bans :white}
+   :selected {}
+   :step :bans
    })
